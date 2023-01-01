@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Object Destructuring</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+// a way to extract values from a object and put them inside individual variables
+
+<script type="text/javascript">
+    const person = {
+        name: 'Domenic',
+        age: 21,
+    };
+    let {
+        name,
+        age
+    } = person;
+    console.log(name);
+    console.log(age);
+    //what if you want to get the gender of a person as well?
+    let {
+        name,
+        age gender = 'Unknown'
+    } = person;
+    console.log(gender);
+
+    function printDetails({
+        name,
+        age
+    }) {
+        console.log('The name is ${name} and they are ${age}');
+    }
+    printDetails(person);
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
